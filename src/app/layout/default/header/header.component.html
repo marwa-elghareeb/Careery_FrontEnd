@@ -1,0 +1,49 @@
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-2 col-lg-2">
+        <div class="Careery_logo">
+          <img src="assets/images/logo-ar-47@2x.png" alt="">
+        </div>
+      </div>
+      <div class="col-12 col-md-10 col-lg-10">
+        <div class="Header-item">
+          <ul class="language_And_Search loginSearch">
+            <li>
+              <div class="Search">
+                <input id="search-box" type="text" class="search-box sesrch_input" name="searchkeyword" value="" (keyup)="searchUser($event)" [(ngModel)]="keyword"
+                placeholder="{{ 'LANDING.SEARCH_PLACEHOLDER' | translate }}s" autocomplete="off" />
+                <label for="search-box"><i class="fas fa-search search-icon"></i></label>
+                <input type="submit" id="search-submit" value="{{ 'LANDING.SEARCH' | translate }}"/>
+                <div class="" *ngIf="keyword">
+                  <span class="loader" *ngIf="loader.search"><i class="fa fa-cog fa-spin"></i></span>
+                  <ul *ngIf="searchUserList">
+                    <div *ngIf="searchUserList.length > 0" class="" malihu-scrollbar
+                      [scrollbarOptions]="scrollbarOptions">
+                      <li *ngFor="let user of searchUserList; let i = index" (click)="goToProfile(user)"
+                        [class.active]="i==activeSearchIndex">
+                        <span>
+                          <img *ngIf="user && user.profile_pic" alt="" [src]="user.profile_pic| picturepath:'users'">
+      
+                          <img *ngIf="user && !user.profile_pic && user.gender && user.experience_level" src="assets/images/charachter/{{ user.gender+'_'+user.experience_level }}.png" alt="">
+                        </span>
+                        <span>{{ (user.first_name + " " + user.last_name) }}</span>
+      
+                        <span>{{ (user.cpp) }}</span>
+                        <strong>{{ user.position_local_name }}</strong>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+            </div>
+          </li>
+
+          </ul>
+        </div>
+
+      </div><!-- End col-12 col-md-10 col-lg-10 -->
+    </div><!-- End Row -->
+  </div>
+</header>
+

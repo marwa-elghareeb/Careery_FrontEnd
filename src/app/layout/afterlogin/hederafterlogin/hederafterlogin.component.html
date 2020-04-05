@@ -1,0 +1,150 @@
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-2 col-lg-2">
+        <div class="Careery_logo">
+          <img src="assets/images/logo-ar-47@2x.png" alt="">
+        </div>
+      </div>
+      <div class="col-12 col-md-10 col-lg-10">
+        <div class="Header-item">
+          <ul class="language_And_Search loginSearch">
+            <li>
+              <div class="Search">
+                <input id="search-box" type="text" class="search-box sesrch_input" name="searchkeyword" value="" (keyup)="searchUser($event)" [(ngModel)]="keyword"
+                placeholder="{{ 'LANDING.SEARCH_PLACEHOLDER' | translate }}s" autocomplete="off" />
+                <label for="search-box"><i class="fas fa-search search-icon"></i></label>
+                <input type="submit" id="search-submit" value="{{ 'LANDING.SEARCH' | translate }}"/>
+                <div class="" *ngIf="keyword">
+                  <span class="loader" *ngIf="loader.search"><i class="fa fa-cog fa-spin"></i></span>
+                  <ul *ngIf="searchUserList">
+                    <div *ngIf="searchUserList.length > 0" class="" malihu-scrollbar
+                      [scrollbarOptions]="scrollbarOptions">
+                      <li *ngFor="let user of searchUserList; let i = index" (click)="goToProfile(user)"
+                        [class.active]="i==activeSearchIndex">
+                        <span>
+                          <img *ngIf="user && user.profile_pic" alt="" [src]="user.profile_pic| picturepath:'users'">
+      
+                          <img *ngIf="user && !user.profile_pic && user.gender && user.experience_level" src="assets/images/charachter/{{ user.gender+'_'+user.experience_level }}.png" alt="">
+                        </span>
+                        <span>{{ (user.first_name + " " + user.last_name) }}</span>
+      
+                        <span>{{ (user.cpp) }}</span>
+                        <strong>{{ user.position_local_name }}</strong>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+            </div>
+          </li>
+            <li>
+              <a href="">
+                <i class="fas fa-user-plus"></i>
+              </a>
+            </li>
+            <li>
+              <a mat-icon-button [matMenuTriggerFor]="menu_2"
+                  aria-label="Example icon-button with a menu">
+                <i class="fas fa-envelope new_alert"></i>
+              </a>
+              <mat-menu #menu_2="matMenu" class="DDL_mune message_DDL">
+                <a href="" mat-menu-item>
+                  <div class="User_message_img">
+                    <img src="" alt="">
+                  </div>
+                  <div class="User_message_Text">
+                    <h6>ادهم محمد السيد</h6>
+                    <p>ادهم محمد السيد</p>
+                  </div>
+                  <div class="message_since">
+                    منذ<span> 22 يوم</span>
+                  </div>
+
+                </a>
+
+              </mat-menu>
+            </li>
+            <li >
+              <a mat-icon-button [matMenuTriggerFor]="menu_1"
+                  aria-label="Example icon-button with a menu">
+                <i class="fas fa-bell"></i>
+              </a>
+              <mat-menu #menu_1="matMenu" class="DDL_mune notification_DDL">
+                <a mat-menu-item class="notification_DDL_item">
+                  <i class="fas fa-birthday-cake i_birthday"></i>
+                  <span>اشعارات  ذكرى ميلاد الاصدقاء </span>
+                </a>
+                <a mat-menu-item class="notification_DDL_item">
+                  <i class="fas fa-eye i_viewProfile"></i>
+                  <span>اشخاص تطلعو علي ملفك الشخصي</span>
+                </a>
+                <a mat-menu-item class="notification_DDL_item">
+                  <i class="fas fa-user-check i_acceptAdd"></i>
+                  <span>طلبات الصداقة المقبولة </span>
+                </a>
+                <a mat-menu-item class="notification_DDL_item">
+                  <i class="fas fa-comment-dollar i_recommendation"></i>
+                  <span>رسائل التوصية </span>
+                </a>
+                <a mat-menu-item class="notification_DDL_item">
+                  <i class="fas fa-comment-dots i_recommendation2"></i>
+                  <span>رسائل التزكية </span>
+                </a>
+
+
+
+              </mat-menu>
+            </li>
+            <li>
+              <div class="user_img_name">
+                <div class="user_img">
+                  <img src="assets/images/user_profile.png" alt="">
+                </div>
+                <div class="user_name">
+                  <h1>عبد الله الحسين</h1>
+                  <span>مهندس اليكترونات</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a>
+                <a mat-icon-button [matMenuTriggerFor]="menu_5"
+                    aria-label="Example icon-button with a menu">
+                  <i class="fas fa-caret-down"></i>
+                </a>
+                <mat-menu #menu_5="matMenu" class="DDL_mune Profile_DDL">
+                  <a mat-menu-item class="EditPrfile_item">
+                    <i class="fas fa-user-cog"></i>
+                    <span>صفحتي الشخصية</span>
+                  </a>
+                  <a mat-menu-item class="Setting_item">
+                    <i class="fas fa-cog"></i>
+                    <span>الاعدادات</span>
+                  </a>
+                  <a mat-menu-item class="LogOUt_item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>تسجيل الخروج</span>
+                  </a>
+                </mat-menu>
+              </a>
+            </li>.
+            <li>
+              <div class="Language_DDL" style="display: none;">
+                <div ngbDropdown class="d-inline-block">
+                  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>lang</button>
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem >AR</button>
+                    <button ngbDropdownItem >EN</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- End col-12 col-md-10 col-lg-10 -->
+    </div><!-- End Row -->
+  </div>
+</header>
+

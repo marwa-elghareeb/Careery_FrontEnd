@@ -1,0 +1,293 @@
+<section class="Profile_Page">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-8">
+        <div class="profile_contant">
+          <div class="Profile_cover">
+            <div class="Pr_cover_img">
+              <img src="assets/images/Pr_cover.jpg" alt="">
+            </div>
+            <div class="profile_info2">
+              <div class="user_avatar">
+                <img src="../../../assets/images/user_profile.png" alt="">
+              </div>
+              <div class="user_info2">
+                <h3>عبدالله الحسيني</h3>
+                <p>مهندس اليكترونات</p>
+              </div>
+
+            </div>
+            <div class="profile_Cover_upload">
+              <div class="icon-upload">
+                <label for="file-input">
+                  <i class="fas fa-camera"></i>
+                </label>
+                <input id="file-input" type="file" />
+              </div>
+
+            </div>
+            <div class="cpp_copy">
+              <p>
+                الرقم التعريفي :
+                <span>4562</span>
+              </p>
+              <i class="fas fa-copy"></i>
+            </div>
+
+          </div>
+          <div class="Recommendations_count">
+            <img src="assets/images/medal.svg" alt="">
+            <p><span>K 646</span> التوصيات</p>
+            <p><span>K 424</span> صديق</p>
+          </div>
+          <div class="Profile_chart_Knowledge">
+            <div class="profile_contant_heading">
+              <h3>مقياس المعرفة</h3>
+            </div>
+            <div class="chart_div">
+              <div class="share_print_icon">
+                <a href="">
+                  <i class="fas fa-print" placement="top" ngbTooltip="طباعه"></i>
+                </a>
+                <a href="">
+                  <i class="fas fa-share-alt" placement="top" ngbTooltip="مشاركة"></i>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="Profile_searvices_contant">
+            <div class="profile_contant_heading">
+              <h3>خدماتنا</h3>
+            </div>
+            <div class="our_sevsies_cards" dir="rtl">
+              <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+
+                  <div class="sevsies_card">
+                    <i class="{{slide.cardIcon}}"></i>
+                    <h4>{{slide.title}}</h4>
+                    <p>{{slide.info}}</p>
+                  </div>
+
+                </div>
+              </ngx-slick-carousel>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <aside class="sideBar">
+          <div class="Careery_btn_ddl">
+            <button class="BTN_DDL" mat-button [matMenuTriggerFor]="menu">كاريري</button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>دروب داون ليست 1</button>
+              <button mat-menu-item>دروب داون ليست 1 </button>
+              <button mat-menu-item>دروب داون ليست 1 </button>
+            </mat-menu>
+          </div>
+          <div class="myFrinds_box">
+            <div class="box_header">
+              <p>الاصدقاء</p>
+              <a href="">المزيد</a>
+            </div>
+            <div class="fr_block g_scrollBar">
+              <ul>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="Suggested_friends_box">
+            <div class="box_header">
+              <p>الاصدقاء المحقترحين</p>
+              <a href="">المزيد</a>
+            </div>
+            <div class="fr_block g_scrollBar">
+              <ul>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-user-plus"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-user-plus"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-user-plus"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-user-plus"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-user-plus"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-user-plus"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="fr_img">
+                    <img src="assets/images/fr_image.jpeg" alt="">
+                  </div>
+                  <div class="fr_info">
+                    <h3>عبدالله الحسيني</h3>
+                    <p>مهندس اكترونات</p>
+                  </div>
+                  <div class="fr_message_icon">
+                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-user-plus"></i>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  </div>
+</section>

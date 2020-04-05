@@ -1,0 +1,206 @@
+<section class="login_contant verificationcode_contant">
+    <div class="container">
+        <div class="login_right">
+            <div class="login_title verificationcode_title">
+                <p>قم بإدخال كود التحقق </p>
+            </div>
+
+            <div class="verificationcode_wrapper">
+                <div class="verificationcode_input">
+                    <mat-form-field class="">
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                    <mat-form-field class="">
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                    <mat-form-field class="">
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                    <mat-form-field class="">
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                    <mat-form-field class="">
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                </div>
+                <div class="verificationcode_Counter">
+                    <div class="Counter_contant">
+                        <p>00 : <span>00</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="C_button_contaner">
+                <button class="C_Strock_button_back" type="button" mat-stroked-button>إعادة ارسال</button>
+                <button class="authentication_button C_d_inlinBlock" type="button" mat-flat-button>استمرار</button>
+            </div>
+           
+        </div>
+    </div>
+    <div class="login_left">
+        <img src="assets/images/Verification2x.jpg" alt="">
+    </div>
+</section>
+
+
+
+<!-- بوب اب كود التحقق -->
+<!--section class="PopUP_wrapper">
+    <div class="Popup_overlay">
+        <div class="popup_contant">
+            <div class="popup_header">
+                <h6>الشروط و الاحكام</h6>
+                <i class="far fa-times-circle"></i>
+            </div>
+            <div class="popup_center">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="1">اعادة ارسال كود التحقق</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="inputWithIcon">
+                            <input type="text" placeholder="رقم الجوال" value="0100 000 000" disabled>
+                            <i class="fas fa-phone-square"></i>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="2">تعديل رقم الجوال / الايميل</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="inputWithIcon">
+                            <input type="text" placeholder="">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup_footer">
+                <div class="C_button_contaner">
+                    <button class="C_Strock_button_back" type="button" mat-stroked-button>إرسال كود التحقق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</!--section>
+
+<!--div class="commonWrap">
+ 
+  <div class="">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="reset-password-container">
+          <img src="assets/images/icn1.png" alt="image" />
+          <h1 class="ver_title">Thanks for joining us</h1>
+          <P>
+            {{ 'COMMON.VERIFICATION_MSG'| translate }}
+          </P>
+          <div class="">
+            <form class="form-horizontal" [formGroup]="verificationForm" (submit)="verificationAction()" novalidate>
+              <div class="alert alert-success text-center" *ngIf="successMessage">{{successMessage}}</div>
+              <div class="alert alert-danger text-center" *ngIf="errorMessage">{{errorMessage}}</div>
+
+              <div class="formWrap">
+                <label for="password">{{'COMMON.VERIFICATION_CODE' | translate}} <small><i
+                      class="fa fa-asterisk landing-req-sign" aria-hidden="true"></i></small> 
+                </label>
+                <input class="txtField" type="text" name="code" id="code" formControlName="code"
+                  placeholder="" required>
+                <div
+                  *ngIf="verificationForm.controls['code'].invalid && (verificationForm.controls['code'].dirty)"
+                  class="alert alert-danger">
+                  <div *ngIf="verificationForm.controls['code'].errors.required">
+                    {{ 'COMMON.CODE_REQUIRED' | translate }}</div>
+                  <div *ngIf="verificationForm.controls['code'].hasError('whitespace')">
+                    {{ 'LANDING.INVALID'| translate }}</div>
+
+                  </div>
+                  
+              </div>
+              <div class="formWrap">
+
+                <button class="btnGreen" type="submit"
+                  [disabled]="loader.verification || verificationForm.pristine || verificationForm.invalid">
+                  <span *ngIf="loader.verification" class="loader-p"><i class="fa fa-cog fa-spin"></i></span>
+                  {{'CHANGE_PASSWORD.SUBMIT' | translate}}</button>
+
+              </div>
+
+              <div class="resend_mail">
+                  <span>
+                      <i class="fa fa-cog fa-spin" *ngIf="loader.resend"></i>
+                      <a (click)="resendVerificationCode()" href="javascript:void(0)">Resend Confirmation Email{{ 'SIGNUP_THANKYOU.RESEND'| translate }}</a>
+                  </span>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </!--div>
+</div-->
+
+
+
+<!--div class="commonWrap">
+
+  <div class="">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="reset-password-container">
+          <img src="assets/images/icn1.png" alt="image" />
+          <h1 class="ver_title">Thanks for joining us</h1>
+          <P>
+            {{ 'COMMON.VERIFICATION_MSG'| translate }}
+          </P>
+          <div class="">
+            <form class="form-horizontal" [formGroup]="verificationForm" (submit)="verificationAction()" novalidate>
+              <div class="alert alert-success text-center" *ngIf="successMessage">{{successMessage}}</div>
+              <div class="alert alert-danger text-center" *ngIf="errorMessage">{{errorMessage}}</div>
+
+              <div class="formWrap">
+                <label for="password">{{'COMMON.VERIFICATION_CODE' | translate}} <small><i
+                      class="fa fa-asterisk landing-req-sign" aria-hidden="true"></i></small> 
+                </label>
+                <input class="txtField" type="text" name="code" id="code" formControlName="code"
+                  placeholder="" required>
+                <div
+                  *ngIf="verificationForm.controls['code'].invalid && (verificationForm.controls['code'].dirty)"
+                  class="alert alert-danger">
+                  <div *ngIf="verificationForm.controls['code'].errors.required">
+                    {{ 'COMMON.CODE_REQUIRED' | translate }}</div>
+                  <div *ngIf="verificationForm.controls['code'].hasError('whitespace')">
+                    {{ 'LANDING.INVALID'| translate }}</div>
+
+                  </div>
+                  
+              </div>
+              <div class="formWrap">
+
+                <button class="btnGreen" type="submit"
+                  [disabled]="loader.verification || verificationForm.pristine || verificationForm.invalid">
+                  <span *ngIf="loader.verification" class="loader-p"><i class="fa fa-cog fa-spin"></i></span>
+                  {{'CHANGE_PASSWORD.SUBMIT' | translate}}</button>
+
+              </div>
+
+              <div class="resend_mail">
+                  <span>
+                      <i class="fa fa-cog fa-spin" *ngIf="loader.resend"></i>
+                      <a (click)="resendVerificationCode()" href="javascript:void(0)">Resend Confirmation Email{{ 'SIGNUP_THANKYOU.RESEND'| translate }}</a>
+                  </span>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div-->

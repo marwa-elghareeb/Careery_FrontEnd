@@ -1,0 +1,109 @@
+<div class="cvInfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <!--
+            الــ Profile Cover  موجود هنا للتست بس مش اكتر
+        -->
+        <div class="profile_contant">
+          <div class="Profile_cover">
+            <div class="Pr_cover_img">
+              <img src="assets/images/Pr_cover.jpg" alt="">
+            </div>
+            <div class="profile_info2">
+              <div class="user_avatar">
+                <img src="../../../assets/images/user_profile.png" alt="">
+              </div>
+              <div class="user_info2">
+                <h3>عبدالله الحسيني</h3>
+                <p>مهندس اليكترونات</p>
+              </div>
+
+            </div>
+            <div class="profile_Cover_upload">
+              <div class="icon-upload">
+                <label for="file-input">
+                  <i class="fas fa-camera"></i>
+                </label>
+                <input id="file-input" type="file" />
+              </div>
+
+            </div>
+            <div class="cpp_copy">
+              <p>
+                الرقم التعريفي :
+                <span>4562</span>
+              </p>
+              <i class="fas fa-copy"></i>
+            </div>
+
+          </div>
+          <div class="Recommendations_count">
+            <img src="assets/images/medal.svg" alt="">
+            <p><span>K 646</span> التوصيات</p>
+            <p><span>K 424</span> صديق</p>
+          </div>
+        </div>
+        <div class="gird_icon">
+          <i class="fas fa-th-large active"></i>
+          <i class="fas fa-th"></i>
+        </div>
+        <section class="CV_slide_container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="slider-nav image_view">
+                <img src="{{imgSrc}}" class="img_W" alt="">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="culom_height g_scrollBar">
+                <div class="slider-for image_thum" *ngFor="let img of sliderArr">
+                                    <span
+                                            [ngClass]="(img.cvType == 'مجانى') ? 'free_label': 'pay_label'">{{img.cvType}}</span>
+                  <img src="{{img.src}}" alt="" (click)="checkSrc($event) ">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!--
+            cv_grid
+            السكشن دا خاص بطريقة العرض التانيه
+        -->
+        <section class="cv_grid">
+          <div class="row">
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="contaner_img">
+                <span class="free_label">مجاني</span>
+                <img src="assets/images/CV_Images_Test/1-100.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="contaner_img">
+                <span class="pay_label">مدفوع</span>
+                <img src="assets/images/CV_Images_Test/2-100.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="contaner_img">
+                <span class="free_label">مجاني</span>
+                <img src="assets/images/CV_Images_Test/3-100.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="contaner_img">
+                <span class="pay_label">مدفوع</span>
+                <img src="assets/images/CV_Images_Test/4-100.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="col-lg-4">
+        Side bar
+      </div>
+    </div>
+  </div>
+</div>

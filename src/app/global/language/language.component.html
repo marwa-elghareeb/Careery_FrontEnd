@@ -1,0 +1,11 @@
+
+<div class="Language_DDL">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{ 'LANDING.FOOTER_LANGUAGE'| translate }}</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button *ngFor="let lang of allLanguage" (click)="langChange(lang.lang_code)" ngbDropdownItem >{{ lang.lang_code }}</button>
+    
+      </div>
+    
+    </div>
+  </div>

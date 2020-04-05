@@ -1,0 +1,79 @@
+<section class="login_contant">
+  <div class="container">
+    <div class="login_right">
+      <div class="login_title">
+        <h1>ابدا معنا</h1>
+        <p>لبناء حياتك المهنية</p>
+      </div>
+      <form [formGroup]="loginForm" novalidate>
+        <div class="login_input">
+          <mat-form-field class="example-full-width">
+            <i class="fas fa-keyboard login_input_icon"></i>
+            <input class="txtField" name="" value="" matInput
+                   placeholder="{{ 'LANDING.EMAIL' | translate }} / {{ 'LANDING.MOBILE' | translate }}"
+                   formControlName="credential" autocomplete="off" required>
+
+
+            <!-- <mat-error>
+              Please enter a valid email address
+            </mat-error> -->
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <i class="fas fa-lock"></i>
+            <!-- <i class="fas fa-eye-slash"></i> -->
+            <!-- <i class="fas fa-eye"></i> -->
+
+            <input class="txtField" id="mysecretpassword" type="password" name="" value="" matInput showHideInput
+                   placeholder="{{ 'LANDING.PASSWORD' | translate }}" formControlName="password" autocomplete="off"
+                   required>
+
+
+            <i matSuffix
+               class="material-icons show_hide_password"
+               showHideTrigger="mysecretpassword"
+               [showHideStatus]="{ materialIcon: true, id: 'mysecretpassword' }"
+            ></i>
+          </mat-form-field>
+        </div>
+
+        <div class="remmberMe_ForgetPass">
+          <mat-checkbox>تذكرني</mat-checkbox>
+          <a href="/resetpassword">هل نسيت كلمة المرور؟</a>
+        </div>
+
+        <button class="authentication_button" type="submit" (click)="loginAction()"
+                name="" mat-flat-button>  {{ 'LANDING.LOGIN' | translate }}</button>
+      </form>
+      <div class="register_by_social">
+        <span>او يمكنك التسجيل من خلال</span>
+        <ul>
+          <li><a href="">
+            <i class="fab fa-linkedin"></i>
+          </a></li>
+          <li><a href="login">
+            <i class="fab fa-google"></i>
+          </a></li>
+          <li><a type="button" color="primary"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+      </div>
+      <div class="new_member">
+        <p>عضو جديد في كريري؟
+          <a href="/signup">انضم الان</a>
+        </p>
+      </div>
+      <div class="card-block"></div>
+
+      <div class="card-block">
+
+
+      </div>
+
+
+    </div>
+  </div>
+  <div class="login_left">
+    <img src="assets/images/Login.png" alt="">
+  </div>
+</section>
+
+

@@ -1,0 +1,59 @@
+<footer class="main_footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-1">
+        <div class="footer_sponsored_logo">
+          <img src="https://lodore.com/catalog/view/theme/lodare/images/m3roof.png" alt="شعار معروف">
+        </div>
+      </div>
+
+      <div class="col-lg-9">
+        <div class="footer_terms_links">
+          <ul>
+            <li *ngFor="let page of pageNameList">
+              <a target="_blank" [routerLink]="['/page', page.slug]">
+                {{ page.name | translate }}         
+              </a>
+            </li>
+            
+            <li>
+              <div class="language_And_Search">
+               <app-language></app-language>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-2">
+        <div class="footer_social_Media">
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</footer>
